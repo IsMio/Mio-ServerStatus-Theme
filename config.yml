@@ -1,0 +1,27 @@
+Log:
+  Level: debug
+  AccessPath: ./access.log
+  ErrorPath: ./error.log
+DnsConfigPath: ./dns.json
+Nodes:
+  -
+    PanelType: "V2board" // 面板类型
+    ApiConfig:
+      ApiHost: "https://cloud.mioowo.dev/" // v2board面板的地址，域名结尾一定要加/
+      ApiKey: "788u7tyte73jd72m1270" // v2board面板内配置的通讯密钥
+      NodeID: 1 // v2board面板内对应节点的id
+      NodeType: V2ray // 节点类型
+      Timeout: 30
+      EnableVless: false
+      EnableXTLS: false
+    ControllerConfig:
+      ListenIP: 0.0.0.0
+      UpdatePeriodic: 60
+      EnableDNS: false
+      CertConfig:
+        CertMode: dns
+        CertDomain: "unioreo.rip" // 节点域名
+        Provider: cloudflare
+        Email: 3210596730@qq.com // 你的邮箱
+        DNSEnv: 
+          CF_DNS_API_TOKEN: odlZ9HIUDll44ws87XS8hdBtsieQzcc9t4KG__fr
